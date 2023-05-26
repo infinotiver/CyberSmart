@@ -1,0 +1,208 @@
+<html>
+
+<head>    
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="assets\boxicons\css\boxicons.min.css" rel="stylesheet">
+    <title>CyberSmart  | Home</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="#" rel="icon">
+    <link href="#" rel="apple-touch-icon">
+
+</head>
+<body>
+
+<div class="menu-tab">
+  <h1>CyberSmart</h1>
+    <ul>
+        <li><a href="#"><i class="fas fa-home"></i>#home</a></li>
+        <li><a href="#about"><i class="fas fa-address-card"></i>#about-us</a></li>
+        <li><a href="#blog"><i class="fas fa-tag"></i>#blog</a></li>
+        <li><a href="#"><i class="fas fa-tag"></i>#awareness</a></li>
+        <li><a href="#"><i class="fas fa-phone-alt"></i>#contact</a></li>
+
+       
+    </ul>
+  </div>
+  <div id="notification">
+    <i class="bx bxs-badge-check"></i> Check out new editions of newsletters
+     <span class="close-button" onclick="hideNotification()">x</span>
+   </div>
+   <script>
+    function showNotification() {
+      var notification = document.getElementById("notification");
+      notification.style.display = "block";
+      
+    }
+
+    function hideNotification() {
+      var notification = document.getElementById("notification");
+      notification.style.display = "none";
+    }
+
+    setInterval(showNotification, 10000);
+  </script>
+  <div id="sidenav" class="sidenav">
+    <a href="main.html" id="levelone">Home</a>
+    <a href="main.html" id="leveltwo">Home</a>
+  </div>
+        <h1 class="hal">CyberSmart</h1>
+        <h2  class="rotatingtext"> is a <span class="txt-rotate" data-period="200" data-rotate='["Cyber Awareness Initiative" , "place to learn to be safe ONLINE" , "plae to get cyber help" , "place to be Cyber Aware" , "Your Guide"]'></span></h2>
+        <script>
+        var TxtRotate = function(el, toRotate, period) {
+          this.toRotate = toRotate;
+          this.el = el;
+          this.loopNum = 0;
+          this.period = parseInt(period, 10) || 20;
+          this.txt = '';
+          this.tick();
+          this.isDeleting = false;
+        };
+        
+        TxtRotate.prototype.tick = function() {
+          var i = this.loopNum % this.toRotate.length;
+          var fullTxt = this.toRotate[i];
+        
+          if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
+        
+          this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        
+          var that = this;
+          var delta = 300 - Math.random() * 100;
+        
+          if (this.isDeleting) { delta /= 2; }
+        
+          if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+          } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+          }
+        
+          setTimeout(function() {
+            that.tick();
+          }, delta);
+        };
+        
+        window.onload = function() {
+          var elements = document.getElementsByClassName('txt-rotate');
+          for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+          }
+          // INJECT CSS
+          var css = document.createElement("style");
+          css.type = "text/css";
+          css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #036c45 }";
+          document.body.appendChild(css);
+        };</script>
+        <hr color="#fff" width=50% align="left" class="rotatingtext">
+        <p class="rotatingtext"><i class="bx bx-wifi" ></i> Be Safe Online<br> <i class="bx bxs-message-square-error" ></i> Get To know Cyber Helplines<br> <i class="bx bx-rocket"></i> Know the Tips and Tricks<br> <i class="bx bx-dots-horizontal-rounded
+        "></i> And More<br> </p>
+
+<section id="blog">
+  <div id="blog-section">
+    <div id="header-banner">
+      <h1>Blog</h1>
+    </div>
+  
+    <div id="blog-content">
+      <div id="blog-title" class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>Latest Blog Post</h2>
+          </div>
+          <div class="flip-card-back">
+            <h2>Connected But Protected ?</h2>
+            <p><b>Author:</b> Pranjal Prakarsh</p>
+            <p>Connected but protected?
+              Securing the Smart World
+              
+              By Pranjal Prakarsh
+              
+              As the Internet of Things (IoT) continues to redefine the way we live and work, the security of these connected devices has become a major concern. IoT devices are vulnerable to a wide range of threats, from home security systems to industrial control systems, and it is critical that we recognise these dangers and take precautions. We'll look at the most recent IoT security threats, as well as the various protection measures and advice for remaining secure in the connected world.
+
+              </p>
+            <a href="#" class="section-button">Read More</a>
+          </div>
+        </div>
+      </div>
+  
+
+
+        <div class="blog-post">
+          <div class="cover-image">
+            <img src="assets/slides-1.jpg" alt="Cover Image" height=50% width=200%>
+          </div>
+          <div class="blog-content">
+            <!-- Content of the blog post -->
+            <h3>Blog Post 2</h3>
+          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="section-button">Read More</a>
+          </div>
+        </div>
+
+        <!-- Add more blog posts here -->
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="unique-section">
+    <h2 class="section-title">Our Vision</h2>
+    <p class="section-description">
+      <ul>
+      <li>Cybersecurity Education: Provide informative articles, tutorials, and guides on cybersecurity best practices, online privacy, and common cyber threats. Cover topics such as password security, secure browsing, data encryption, and safe online transactions.</li>
+     
+      <li>Threat Awareness: Keep users updated on the latest cyber threats, including phishing attacks, malware outbreaks, data breaches, and social engineering techniques. Offer insights into how these threats operate, how to identify them, and steps to mitigate the risks.</li>
+      
+      <li>Digital Well-being: Emphasize the importance of maintaining a healthy digital lifestyle. Address issues such as digital addiction, online harassment, cyberbullying, and the impact of excessive screen time. Provide tips and resources for promoting balance, self-care, and responsible technology use.</li>
+      
+      <li>Privacy Protection: Educate users on safeguarding their online privacy. Offer guidance on managing privacy settings on popular platforms and social media networks. Explain the risks associated with sharing personal information online and provide tips for protecting sensitive data.</li>
+      
+      <li>Safe Social Media: Offer tips for safe and responsible social media usage. Cover topics like privacy settings, avoiding scams and fake accounts, dealing with online trolls, and promoting positive interactions online. Provide guidance for parents and guardians on helping children navigate social media safely.</li>
+      
+      <li>Resources for Parents and Educators: Provide dedicated sections with resources, guides, and tools for parents, teachers, and educators. Offer materials for teaching cybersecurity and responsible online behavior to children and students. Include lesson plans, activities, and age-appropriate content.</li>
+      
+      <li>Interactive Features: Include interactive elements such as quizzes, games, and simulations to engage users and reinforce cybersecurity knowledge. Create interactive scenarios where users can make decisions and learn about the consequences of their actions.</li>
+      
+      <li>Community Engagement: Foster a community of users interested in cybersecurity and responsible digital behavior. Include discussion forums, Q&A sections, and user-generated content where people can share their experiences, ask questions, and provide support to one another.</li>
+      
+      <li>News and Updates: Provide a section with the latest news, trends, and developments in the cybersecurity field. Highlight notable events, conferences, and initiatives promoting safe cyber culture.</li>
+      
+      <li>Partnerships and Collaborations: Collaborate with organizations, cybersecurity experts, and educational institutions to provide exclusive content, webinars, and workshops. Partner with local communities and schools to raise awareness about cybersecurity and promote responsible digital practices.</li></ul></p>
+    <a href="#" class="section-button">Learn More</a>
+  </div>
+  
+  <footer>
+
+    <div class="footer">
+      <div class="menu-tab">
+
+          <ul>
+              <li><a href="#"><i class="fas fa-home"></i>#home</a></li>
+              <li><a href="#about"><i class="fas fa-address-card"></i>#about-us</a></li>
+              <li><a href="#blog"><i class="fas fa-tag"></i>#blog</a></li>
+              <li><a href="#"><i class="fas fa-tag"></i>#awareness</a></li>
+              <li><a href="#"><i class="fas fa-phone-alt"></i>#contact</a></li>
+      
+             
+          </ul>
+        </div>
+
+
+        <h2 align="center">Engineered using <span style="color: #ff6969;"><i class="bx bxs-brain"></i></span> by the one and only <strong><u>Pranjal Prakarsh</u></strong> </h2> <p align="center" style="font-size: 14px; color: #fff;">""I'm strategically managing my digital bandwidth to maximize productivity."</p>
+        
+    </div>
+</footer>
+</body>
+</html>
