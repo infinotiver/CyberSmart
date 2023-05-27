@@ -3,7 +3,7 @@ body{
   -webkit-font-smoothing:antialiased;
   font:15px arial;
   color:#fff;
-
+  cursor: pointer;
 }
 h1{
   color:#ebebeb;
@@ -236,7 +236,6 @@ body::after{
 }
 .menu-tab {
   border-radius: 0px 0px 10px 10px;
-
   top: 0;
   z-index: 999;
   display: flex;
@@ -254,13 +253,19 @@ body::after{
 }
 
 @media screen and (max-width: 768px) {
+  .menu-tab{
+    position: sticky;
+  }
   .menu-tab ul {
     flex-wrap: wrap;
+
   }
 
   .menu-tab ul li {
     width: 100%;
     text-align: left;
+    margin:1px;
+    padding:1px;
   }
 
   .menu-tab h1 {
@@ -324,9 +329,14 @@ body::after{
   top:10px;
   right:10px;
   color:#fff;
-  font-size:16px;
+  font-size:20px;
   font-weight:700;
   cursor:pointer
+}
+#notification .close-button:hover{
+  color:#7e7a7a;
+  font-size: 22px;
+  transition: 0.3s ease;
 }
 @keyframes slide-in{
   0%{
