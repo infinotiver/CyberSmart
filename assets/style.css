@@ -252,18 +252,19 @@ body::after{
   margin-left: 10px;
   flex-grow: 1;
 }
+
 @media screen and (max-width: 768px) {
   .menu-tab ul {
     flex-wrap: wrap;
-
   }
 
   .menu-tab ul li {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
+
   .menu-tab h1 {
-    visibility: collapse;
+    display: none; /* Hide the h1 on mobile */
   }
 }
 .menu-tab h1:hover{
