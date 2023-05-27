@@ -1,10 +1,8 @@
 body{
-  background:#000 ;
+  background:#000;
   -webkit-font-smoothing:antialiased;
   font:15px arial;
   color:#fff;
-  padding-left: 5px;
-  padding-right: 5px;
 
 }
 h1{
@@ -13,7 +11,8 @@ h1{
 }
 ::selection {
   background: #fff;
-  color:#20b47e
+  color:#20b47e;
+  
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -22,20 +21,20 @@ h1{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #5846f9;
+  background: transparent;
 
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: transparent;
   border-radius: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: radial-gradient(#36313f, #24ae, rgba(31, 17, 112, 0.9) 0%, rgba(48, 4, 92, 0.9), rgba(27, 18, 78, 0.9) 0%, rgba(36, 11, 61, 0.9));
+  background: linear-gradient(#000,#036c45,#048c5c,#04aa6d,#20b47e,#000);
 }
 
 .hal {
@@ -52,7 +51,7 @@ h1{
   margin-left: 50px;
   font-size: 40px;
   font-weight: 500;
-  background:-webkit-linear-gradient(100deg,#04aa6d,#0452aa,#036c45,#20b47e);
+  background:-webkit-linear-gradient(100deg,#04aa6d,#036c45,#20b47e,#048c5c);
   -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
 }
@@ -124,12 +123,10 @@ body::after{
   color:#fff;
   background:linear-gradient(#48abe000,#04aa6d2d);
   border-radius:10px;
-  padding-bottom: 20px;
-  
+  padding-bottom: 50px;
+
 }
-.blog-title .flip-card-inner p{
-  margin: 50px 50px 50px 50px;
-}
+
 
 
 .blog-post{
@@ -237,14 +234,37 @@ body::after{
 .section-button:hover{
   background-color:#036c45
 }
-.menu-tab{
-  text-align:center;
-  opacity:.8
+.menu-tab {
+  border-radius: 0px 0px 10px 10px;
+
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: #000000a4; /* Adjust the background color as needed */
+  backdrop-filter: blur(10px);
+  text-align: center;
 }
-.menu-tab h1{
-  color:#ffffff9d;
+
+.menu-tab h1 {
+  color: #ffffff9d;
   font-size: 35px;
   margin-left: 10px;
+  flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  .menu-tab ul {
+    flex-wrap: wrap;
+
+  }
+
+  .menu-tab ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-tab h1 {
+    visibility: collapse;
+  }
 }
 .menu-tab h1:hover{
   color:#fff
@@ -255,13 +275,14 @@ body::after{
 }
 .menu-tab ul{
   display:inline-flex;
-  list-style:none
+  list-style:none;
+  transition: all 0.3s ease-in-out 0s
 }
 .menu-tab ul li{
   width:120px;
   margin:10px;
   padding:10px;
-  transition:.5s ease
+  transition:0.5s ease
 }
 .menu-tab ul li a{
   text-decoration:none;
@@ -277,6 +298,8 @@ body::after{
   border-radius:50px;
   box-shadow:0 0 20px 15px #48abe0
 }
+
+
 #notification{
   background-color:#04aa6d;
   color:#fff;
