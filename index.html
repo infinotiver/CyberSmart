@@ -20,7 +20,7 @@
         <li><a href="#"><i class="fas fa-home"></i>#home</a></li>
         <li><a href="#about"><i class="fas fa-address-card"></i>#about</a></li>
         <li><a href="#blog"><i class="fas fa-tag"></i>#blog</a></li>
-        <li><a href="#blog"><i class="fas fa-tag"></i>#webinars</a></li>
+        <li><a href="#news"><i class="fas fa-tag"></i>#news</a></li>
         <li><a href="#"><i class="fas fa-tag"></i>#awareness</a></li>
         <li><a href="#"><i class="fas fa-phone-alt"></i>#contact</a></li>
 
@@ -155,7 +155,7 @@
 
         <div class="blog-post">
           <div class="cover-image">
-            <img src="assets/sample (5).jpg" alt="Cover Image" height=50% width=200%>
+            <img src="assets\img\sample (5).jpg" alt="Cover Image" height=50% width=200%>
           </div>
           <div class="blog-content">
             <!-- Content of the blog post -->
@@ -166,7 +166,7 @@
 
         <div class="blog-post">
           <div class="cover-image">
-            <img src="assets/sample (3).jpg" alt="Cover Image" height=50% width=200%>
+            <img src="assets\img\sample (4).jpg" alt="Cover Image" height=50% width=200%>
           </div>
           <div class="blog-content">
             <!-- Content of the blog post -->
@@ -179,20 +179,26 @@
     </div>
   </div>
 </section>
+<section id="news">
+    <div id="header-banner">
+      <h1>News</h1>
+  </div>
+</section>
+<section id="about">
   <div class="unique-section">
     <h2 class="section-title">Our Vision</h2>
     <p class="section-description">
       <ul>
       <li>Cybersecurity Education: Provide informative articles, tutorials, and guides on cybersecurity best practices, online privacy, and common cyber threats. Cover topics such as password security, secure browsing, data encryption, and safe online transactions.</li>
-     
+      <br>
       <li>Threat Awareness: Keep users updated on the latest cyber threats, including phishing attacks, malware outbreaks, data breaches, and social engineering techniques. Offer insights into how these threats operate, how to identify them, and steps to mitigate the risks.</li>
-      
+      <br>
       <li>Digital Well-being: Emphasize the importance of maintaining a healthy digital lifestyle. Address issues such as digital addiction, online harassment, cyberbullying, and the impact of excessive screen time. Provide tips and resources for promoting balance, self-care, and responsible technology use.</li>
-      
+      <br>
       <li>Privacy Protection: Educate users on safeguarding their online privacy. Offer guidance on managing privacy settings on popular platforms and social media networks. Explain the risks associated with sharing personal information online and provide tips for protecting sensitive data.</li>
-      
+      <br>
       <li>Safe Social Media: Offer tips for safe and responsible social media usage. Cover topics like privacy settings, avoiding scams and fake accounts, dealing with online trolls, and promoting positive interactions online. Provide guidance for parents and guardians on helping children navigate social media safely.</li>
-      
+      <br>
       <li>Resources for Parents and Educators: Provide dedicated sections with resources, guides, and tools for parents, teachers, and educators. Offer materials for teaching cybersecurity and responsible online behavior to children and students. Include lesson plans, activities, and age-appropriate content.</li>
       
       <li>Interactive Features: Include interactive elements such as quizzes, games, and simulations to engage users and reinforce cybersecurity knowledge. Create interactive scenarios where users can make decisions and learn about the consequences of their actions.</li>
@@ -204,19 +210,35 @@
       <li>Partnerships and Collaborations: Collaborate with organizations, cybersecurity experts, and educational institutions to provide exclusive content, webinars, and workshops. Partner with local communities and schools to raise awareness about cybersecurity and promote responsible digital practices.</li></ul></p>
     <a href="#" class="section-button">Learn More</a>
   </div>
-  
+</section>
   <footer>
 
     <div class="footer">
 
 
 
-        <h2 align="center">Engineered using <span style="color: #f3ba94;"><i class="bx bxs-brain"></i></span> by the one and only <strong><u>Pranjal Prakarsh</u></strong> </h2> <p align="center" style="font-size: 14px; color: #fff;">""I'm strategically managing my digital bandwidth to maximize productivity."</p>
+        <h2 align="center">Engineered using <span style="color: #f3ba94;"><i class="bx bxs-brain"></i></span> by  <strong><u>Pranjal Prakarsh</u></strong> </h2> <p align="center" style="font-size: 14px; color: #fff;">""I'm strategically managing my digital bandwidth to maximize productivity."</p>
         <div class="footericons"><a href="#"><i class="bx bxl-github" ></i></a><a href="mailto:#"><i class="bx bxl-google" ></i></a>
           <a href="#"><i class="bx bxl-discord-alt" ></i></a>
           <a href="#"><i class="bx bx-globe" ></i></a></div>
     </div>
 </footer>
+<button onclick="topFunction()" id="back-to-top" title="Go to Top">Top</button>
+<script>  
+let mybutton=document.getElementsById("back-to-top");
+window.onscroll=function(){scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop>20 || document.documentElement.scrollTop>20){
+    mybutton.style.display="block";
+  } else {
+    mybutton.style.display="none";
+  }
+}
 
+function topFunction(){
+  document.body.ScrollTop=0;
+  document.documentElement.scrollTop=0
+}
+</script>
 </body>
 </html>
