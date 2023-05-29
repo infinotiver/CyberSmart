@@ -423,14 +423,17 @@ body::after{
 @keyframes float{
   0%{
     opacity:0;
-    
+    color:#fff
 }
 50%{
     opacity:1;
     transform: translateY(0);
+    color:whitesmoke
 }
 100%{
     transform: translateY(10px);
-    opacity:0
+    opacity:0;
+    color:wheat
 }
+
 }
