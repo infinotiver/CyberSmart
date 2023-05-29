@@ -387,6 +387,7 @@ body::after{
   align-items:center;
   justify-content:center;
   text-align:center;
+  z-index: 0;
 }
 .mouseh i{
   transition:.3s ease;
