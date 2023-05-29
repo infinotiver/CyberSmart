@@ -1,9 +1,9 @@
 body{
-  background:#000;
+  background: #000;
   -webkit-font-smoothing:antialiased;
   font:15px arial;
   color:#fff;
-  cursor: pointer;
+
 }
 h1{
   color:#ebebeb;
