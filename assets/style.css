@@ -392,6 +392,11 @@ body::after{
   -webkit-text-fill-color:transparent;
 
 }
+.footericons i:hover{
+  background:-webkit-linear-gradient(black,black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;  
+}
 .mouseh {
   text-decoration: none;
   color:#fff;
@@ -400,6 +405,7 @@ body::after{
   text-align:center;
   z-index: 0;
 }
+
 .mouseh i{
   transition:.3s ease;
   text-decoration: none;
@@ -408,10 +414,11 @@ body::after{
   text-align:center;  
   font-size: 25px;
   padding:5px;
-  background:-webkit-linear-gradient(white,rgba(245, 245, 245, 0.918),#fafafa,#000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color:transparent;
+  color:#fff;
   animation:float 4s infinite
+}
+.mouseh i:hover{
+  color:#036c45;
 }
 @keyframes float{
   0%{
