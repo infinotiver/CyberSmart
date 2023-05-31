@@ -169,6 +169,54 @@ NAVIGATION
     letter-spacing: 3px;
     line-height: 40px;
 }
-strong{
+.bold{
     color:#20b47e
 }
+.footer {
+  background: linear-gradient(to right, #036c45, #0452aa, #048c5c, #04aa6d, #20b47e,#105072) ;
+  background-size: 600% 600%;
+  border-radius: 5px;
+  margin: 0;
+  animation: gradient 10s ease infinite;
+  padding: 50px;
+  text-size-adjust: auto;
+  margin-top: 50px;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.footericons {
+  text-decoration: none;
+  color:#fff;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.footericons i{
+
+  text-decoration: none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;  
+  font-size: 25px;
+  padding:5px;
+  background:-webkit-linear-gradient(white,rgba(245, 245, 245, 0.918),#fafafa,#000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+
+}
+.footericons i:hover{
+  background:-webkit-linear-gradient(black,rgb(36, 35, 35));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;  }
