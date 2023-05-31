@@ -387,22 +387,22 @@ body::after{
   text-align:center;
 }
 .footericons i{
-
   text-decoration: none;
   align-items:center;
   justify-content:center;
   text-align:center;  
   font-size: 25px;
   padding:5px;
-  background:-webkit-linear-gradient(white,rgba(245, 245, 245, 0.918),#fafafa,#000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color:transparent;
+  margin:5px;
+  color:#fff;
+  background: #0000005e;
+  border-radius: 50%;
 
 }
 .footericons i:hover{
-  background:-webkit-linear-gradient(black,rgb(36, 35, 35));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color:transparent;  
+  background: #ffffff5e;
+  border-radius: 50%; 
+  color:#000
 }
 .mouseh {
   text-decoration: none;
