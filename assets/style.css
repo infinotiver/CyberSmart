@@ -40,6 +40,7 @@ h1{
   -webkit-text-fill-color:transparent;
 }
 
+
 body::after,body::before{
   content:"";
   position:fixed;
@@ -51,7 +52,6 @@ body::after,body::before{
 }
 body::before{
   left:0;
-
   background:linear-gradient(#000,#036c45,#048c5c,#04aa6d,#000);
   animation:lightEmittingBorder 4s infinite
 
@@ -83,7 +83,8 @@ body::after{
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:#fff
+  color:#fff;
+  
 }
 #header-banner h1{
   font-size:48px;
@@ -139,7 +140,7 @@ body::after{
   filter: blur(10px) ;
 }
 .blog-content{
-  margin-top:20px;
+  margin-top:0px;
 
 }
 .blog-post:hover .cover-image img{
@@ -226,7 +227,8 @@ body::after{
   transition:background-color 0.5s ease
 }
 .section-button:hover{
-  background-color:#036c45
+  background-color:#036c4650;
+
 }
 .menu-tab {
   top: 0;
