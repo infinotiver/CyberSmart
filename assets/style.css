@@ -106,12 +106,10 @@ body::after{
   text-align:center;
   box-shadow:0 4px 8px 0 rgba(0,0,0,.2);
   color:#fff;
-  background:linear-gradient(#48abe000,#04aa6d2d);
+  background:linear-gradient(to bottom,#48abe000,#04aa6d2d);
   border-radius:10px;
   padding-bottom: 50px;
-
 }
-
 
 
 .blog-post{
@@ -432,12 +430,12 @@ body::after{
 @keyframes float{
   0%{
     opacity:0;
-    color:#fff
+    color:gainsboro
 }
 50%{
     opacity:1;
     transform: translateY(0);
-    color:whitesmoke
+    color:ghostwhite
 }
 100%{
     transform: translateY(10px);
