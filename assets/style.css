@@ -235,7 +235,6 @@ body::after{
   z-index: 999;
   display: flex;
   align-items: center;
-
   text-align: center;
 }
 
@@ -248,7 +247,9 @@ body::after{
 
 
 .menu-tab h1:hover{
-  color:#fff
+  background:-webkit-linear-gradient(25deg,#049faa,#03346c,#5920b4,#8c048c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
 }
 .menu-tab img{
   height:10%;
