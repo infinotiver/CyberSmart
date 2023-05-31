@@ -235,7 +235,7 @@ body::after{
   z-index: 999;
   display: flex;
   align-items: center;
-  background-color: #000000a4; /* Adjust the background color as needed */
+
   text-align: center;
 }
 
