@@ -354,7 +354,11 @@ body::after{
       transform:translateY(0)
   }
 }
+.vision li{
+  list-style: none;
+  text-align: left;
 
+}
 .footer {
   background: linear-gradient(to right, #036c45, #0452aa, #048c5c, #04aa6d, #20b47e,#105072) ;
   background-size: 600% 600%;
