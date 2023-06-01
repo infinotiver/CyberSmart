@@ -187,6 +187,92 @@
         <div id="header-banner">
             <h1>News</h1>
         </div>
+        <div class="news-section">
+            <div class="slider-news">
+              <div class="slides">
+                <div class="slide">
+                  <img src="assets\img\sample (1).jpg" alt="Slide 1" >
+                </div>
+                <div class="slide">
+                  <img src="assets\img\sample (2).jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                  <img src="assets\img\sample (3).jpg" alt="Slide 3">
+                </div>
+              </div>
+              <div class="controls">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+              </div>
+            </div>
+            <div class="grid-news">
+              <div class="news-item">
+                <img src="https://via.placeholder.com/300x200.png?text=News+1" alt="News 1">
+                <h3>News Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices velit eget sem condimentum, in molestie nulla vestibulum.</p>
+              </div>
+              <div class="news-item">
+                <img src="https://via.placeholder.com/300x200.png?text=News+2" alt="News 2">
+                <h3>News Title 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices velit eget sem condimentum, in molestie nulla vestibulum.</p>
+              </div>
+              <div class="news-item">
+                <img src="https://via.placeholder.com/300x200.png?text=News+3" alt="News 3">
+                <h3>News Title 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices velit eget sem condimentum, in molestie nulla vestibulum.</p>
+              </div>
+              <div class="news-item">
+                <img src="https://via.placeholder.com/300x200.png?text=News+4" alt="News 4">
+                <h3>News Title 4</h3>
+                <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed ultrices velit eget sem condimentum, in molestie nulla vestibulum.</p>
+              </div>
+            </div>
+          </div>
+          <script>// Get the necessary elements from the DOM
+            const slider = document.querySelector('.slider-news');
+            const slides = slider.querySelectorAll('.slide');
+            const prevBtn = slider.querySelector('.prev');
+            const nextBtn = slider.querySelector('.next');
+            
+            let currentSlide = 0; // Set the initial slide to the first one
+            
+            // Function to move to the next slide
+            function nextSlide() {
+              if (currentSlide < slides.length - 1) {
+                currentSlide++;
+              } else {
+                currentSlide = 0;
+              }
+              updateSlider();
+            }
+            
+            // Function to move to the previous slide
+            function prevSlide() {
+              if (currentSlide > 0) {
+                currentSlide--;
+              } else {
+                currentSlide = slides.length - 1;
+              }
+              updateSlider();
+            }
+            
+            // Function to update the slider
+            function updateSlider() {
+              // Hide all the slides
+              slides.forEach(slide => {
+                slide.style.display = 'none';
+              });
+              // Show the current slide
+              slides[currentSlide].style.display = 'block';
+            }
+            
+            // Attach click event listeners to the previous and next buttons
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Set an interval to automatically move to the next slide every 5 seconds
+            setInterval(nextSlide, 5000);
+            </script>
     </section>
     <section id="about">
         <div id="header-banner">
@@ -221,6 +307,7 @@
             <a href="#" class="section-button">Learn More</a>
         </div>
     </section>
+
     <footer>
 
         <div class="footer">
