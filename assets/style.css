@@ -442,7 +442,6 @@ body::after{
     opacity:0;
     color:wheat
 }
-
 }
 
 /* Styles for the news section */
@@ -451,81 +450,20 @@ body::after{
   margin: 0 auto;/* Center the news section */
   border-radius: 5px; 
 }
-
-/* Styles for the rotating slider news */
-.slider-news {
-  position: relative;
-  margin-bottom:20px ;
-  margin-top: 20px;
-  /* Set the position to relative */
-}
-
-.slider-news .slides {
-  display: flex; /* Display the slides in a flex container */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Enable snap scrolling */;
-  border-radius: 20px;
-}
-
-.slider-news .slide {
-  width: 100%; /* Set the width of the slide */
-  flex-shrink: 0; /* Disable shrinking of the slide */
-  scroll-snap-align: start; /* Snap to the start of each slide */
-}
-
-.slider-news .slide img {
-  width: 100%; /* Set the width of the slide image */
-  filter:blur(10px);
-  transition: .5s ease-in;
-}
-.slider-news .slide img:hover {
-  filter:blur();
-   /* Set the width of the slide image */
-}
-
-
-
-.slider-news .controls {
-  position: absolute; /* Set the position to absolute */
-  bottom: 0; /* Align the controls to the bottom of the slider */
-  left: 50%; /* Center the controls horizontally */
-  transform: translateX(-50%); /* Move the controls to the center */
-  display: flex; /* Display the controls in a flex container */
-  justify-content: center; /* Center the controls horizontally */
-  align-items: center; /* Center the controls vertically */
-}
-
-.slider-news .prev,
-.slider-news .next {
-  width: 30px; /* Set the width of the controls */
-  height: 30px; /* Set the height of the controls */
-  border-radius: 50%; /* Make the controls circular */
-  background-color: #04aa6d; /* Set the background color of the controls */
-  color: #fff; /* Set the color of the controls */
-  font-size: 20px; /* Set the font size of the controls */
-  text-align: center; /* Center the text of the controls */
-  cursor: pointer; /* Set the cursor to a pointer */
-  margin: 0 10px; /* Add some margin between the controls */
-  border:none;
-  margin:10px
-}
-
-.slider-news .prev:hover,
-.slider-news .next:hover {
-  background-color: #036c45; /* Change the background color of the controls on hover */
-}
-
 /* Styles for the grid view news */
 .grid-news {
   display: grid; /* Display the news in a grid */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Set the number of columns and their size */
   grid-gap: 20px; /* Add some space between the news */
+  margin:10px;
 }
 
 .grid-news .news-item {
-  background-color: #04aa6d; /*Set the background color of the news item */
+  background-color: #20b47e; /*Set the background color of the news item */
   padding: 20px; /* Add some padding to the news item */
   border-radius: 5px; /* Add some border radius to the news item */
+  transition:0.5s ease;
+
 }
 
 .grid-news .news-item:hover {
