@@ -1,7 +1,7 @@
 let isScrolling = false;
 
 function smoothScrollTo(targetPosition, duration) {
-    const startPosition = window.pageYOffset;
+    const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
     let startTime = null;
 
@@ -32,7 +32,7 @@ function handleScroll(event) {
 
     isScrolling = true;
     const viewportHeight = window.innerHeight;
-    const currentPosition = window.pageYOffset;
+    const currentPosition = window.scrollY;
     const scrollDirection = event.deltaY > 0 ? 1 : -1;
     const targetPosition = currentPosition + (viewportHeight * scrollDirection);
 
@@ -40,7 +40,7 @@ function handleScroll(event) {
     const maxScrollPosition = document.body.scrollHeight - viewportHeight;
     const finalPosition = Math.max(0, Math.min(targetPosition, maxScrollPosition));
 
-    smoothScrollTo(finalPosition, 1000); // Smooth scroll to the target position in 1000ms
+    smoothScrollTo(finalPosition, 500); // Smooth scroll to the target position in 500ms
 }
 
 window.addEventListener('wheel', handleScroll);
