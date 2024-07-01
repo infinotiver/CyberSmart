@@ -87,17 +87,21 @@ body::after {
 }
 
 
-  /*
+/*
 ----------------------------------------
 Master Navigation Panel
 ----------------------------------------
 */
 .nav-bar {
   top: 0;
+  left:0;
   z-index: 999;
   display: flex;
   align-items: center;
-  text-align: center
+  text-align: center;
+  position: sticky;
+  background-color: transparent;
+  backdrop-filter: blur(50px);
 }
 
 .nav-bar h1 {
