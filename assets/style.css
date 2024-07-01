@@ -250,42 +250,6 @@ Side Navigation
 
 /*
 ----------------------------------------
-Unique Section
-----------------------------------------
-*/
-.unique-section {
-  background-color: #04aa6d;
-  padding: 50px;
-  text-align: center;
-  color: #fff;
-  border-radius: 5px
-}
-
-.section-title {
-  font-size: 28px
-}
-
-.section-description {
-  font-size: 18px;
-  margin-bottom: 30px
-}
-
-.section-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #048c5c;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color .5s ease
-}
-
-.section-button:hover {
-  background-color: #036c4650
-}
-
-/*
-----------------------------------------
 Master Navigation Panel
 ----------------------------------------
 */
@@ -527,44 +491,4 @@ Footer
     opacity: 0;
     color: wheat
   }
-}
-
-.news-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 5px
-}
-
-.grid-news {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  margin: 10px
-}
-
-.grid-news .news-item {
-  background-color: #20b47e;
-  padding: 20px;
-  border-radius: 5px;
-  transition: .5s ease
-}
-
-.grid-news .news-item:hover {
-  background-color: #036c45
-}
-
-.grid-news .news-item h3 {
-  font-size: 24px;
-  margin-bottom: 10px
-}
-
-.grid-news .news-item p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px
-}
-
-.grid-news .news-item img {
-  width: 100%;
-  border-radius: 5px
 }
