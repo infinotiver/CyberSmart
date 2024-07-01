@@ -86,32 +86,13 @@ body::after {
   }
 }
 
-/*
-----------------------------------------
-Header Banner
-----------------------------------------
-*/
-#header-banner {
-  background-size: cover;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff
-}
 
-#header-banner h1 {
-  font-size: 48px;
-  font-weight: 700;
-  border-bottom: 8px solid #04aa6d
-}
   /*
 ----------------------------------------
 Master Navigation Panel
 ----------------------------------------
 */
-.menu-tab {
+.nav-bar {
   top: 0;
   z-index: 999;
   display: flex;
@@ -119,31 +100,31 @@ Master Navigation Panel
   text-align: center
 }
 
-.menu-tab h1 {
+.nav-bar h1 {
   color: #ffffff9d;
   font-size: 35px;
   margin-left: 10px;
   flex-grow: 1;
 }
 
-.menu-tab h1:hover {
+.nav-bar h1:hover {
   background: -webkit-linear-gradient(25deg, #049faa, #03346c, #5920b4, #8c048c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
 }
 
-.menu-tab img {
+.nav-bar img {
   height: 10%;
   width: 5%
 }
 
-.menu-tab ul {
+.nav-bar ul {
   display: inline-flex;
   list-style: none;
   transition: all .3s ease-in-out 0s
 }
 
-.menu-tab ul li {
+.nav-bar ul li {
   width: 120px;
   margin: 10px;
   padding-top: 10px;
@@ -151,13 +132,13 @@ Master Navigation Panel
   transition: .5s ease
 }
 
-.menu-tab ul li a {
+.nav-bar ul li a {
   text-decoration: none;
   color: #989b9a;
   font-size: 15px
 }
 
-.menu-tab ul li a:hover {
+.nav-bar ul li a:hover {
   color: #fff
 }
 
@@ -187,11 +168,11 @@ Master Navigation Panel
   }
 }
 
-.menu-tab .fas {
+.nav-bar .fas {
   margin-right: 1px
 }
 
-.menu-tab ul li:hover {
+.nav-bar ul li:hover {
   background-color: #04aa6d;
   border-radius: 50px;
   box-shadow: 0 0 20px 15px #036c45
