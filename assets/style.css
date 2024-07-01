@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background: #000;
   -webkit-font-smoothing: antialiased;
@@ -43,19 +44,22 @@ h1 {
   text-align: center;
   font-size: 10rem;
   font-weight: 700;
-  padding:30vh 20vw;
+  padding: 30vh 20vw;
   color: #fff;
-  margin:10px
+  margin: 10px;
+  display:inline-flex
 }
+
 .header-text .white {
-  color:#fff;
-  text-align:center;
-  display:inline
+  color: #fff;
+  text-align: center;
+  display: inline
 }
+
 .header-text .green {
-  color:#04aa6d;
-  text-align:center;
-  display:inline
+  color: #04aa6d;
+  text-align: center;
+  display: inline
 }
 
 /*
@@ -65,7 +69,7 @@ Master Navigation Panel
 */
 .nav-bar {
   top: 0;
-  left:0;
+  left: 0;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -73,6 +77,8 @@ Master Navigation Panel
   position: sticky;
   background-color: transparent;
   backdrop-filter: blur(50px);
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
 }
 
 .nav-bar h1 {
@@ -83,15 +89,9 @@ Master Navigation Panel
 }
 
 .nav-bar h1:hover {
-  background: -webkit-linear-gradient(25deg, #049faa, #03346c, #5920b4, #8c048c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent
+  color: white
 }
 
-.nav-bar img {
-  height: 10%;
-  width: 5%
-}
 
 .nav-bar ul {
   display: inline-flex;
@@ -113,8 +113,11 @@ Master Navigation Panel
   font-size: 15px
 }
 
-.nav-bar ul li a:hover {
-  color: #fff
+.nav-bar ul :hover {
+  color: #fff;
+  a {
+    color: white
+  }
 }
 
 @media screen and (max-width:768px) {
