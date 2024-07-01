@@ -14,6 +14,7 @@ h1 {
   color: #ebebeb;
   text-align: left
 }
+
 /*
 ----------------------------------------
 [1] Selection
@@ -28,22 +29,23 @@ h1 {
   width: 10px;
   display: none
 }
+
 /*
 ----------------------------------------
 [1] Misc Css
 ----------------------------------------
 */
 .hal {
-  text-align: left;
+  text-align: center;
   margin-left: 50px;
-  font-size: 48px;
+  font-size: 10rem;
   font-weight: 700;
   padding-bottom: 10px;
-  color: #fff
+  color:#fff;
 }
 
 .rotatingtext {
-  text-align: left;
+  text-align: center;
   margin-left: 50px;
   font-size: 40px;
   font-weight: 500;
@@ -77,20 +79,21 @@ body::after {
 
 @keyframes lightEmittingBorder {
   0% {
-      height: 0;
-      opacity: 0
+    height: 0;
+    opacity: 0
   }
 
   50% {
-      height: 100%;
-      opacity: 1
+    height: 100%;
+    opacity: 1
   }
 
   100% {
-      height: 0;
-      opacity: 0
+    height: 0;
+    opacity: 0
   }
 }
+
 /*
 ----------------------------------------
 Header Banner
@@ -199,6 +202,7 @@ Blog Section
 .blog-post a:hover {
   background-color: #048c5c
 }
+
 /*
 ----------------------------------------
 Side Navigation
@@ -240,9 +244,10 @@ Side Navigation
 
 @media screen and (max-width:768px) {
   #sidenav {
-      display: none
+    display: none
   }
 }
+
 /*
 ----------------------------------------
 Unique Section
@@ -278,6 +283,7 @@ Unique Section
 .section-button:hover {
   background-color: #036c4650
 }
+
 /*
 ----------------------------------------
 Master Navigation Panel
@@ -295,7 +301,7 @@ Master Navigation Panel
   color: #ffffff9d;
   font-size: 35px;
   margin-left: 10px;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .menu-tab h1:hover {
@@ -335,27 +341,27 @@ Master Navigation Panel
 
 @media screen and (max-width:768px) {
   .menu-tab {
-      background-color: transparent;
-      position: sticky;
-      background-color: #000000bd;
-      backdrop-filter: blur(10px);
-      margin: 10px;
-      padding: 10px;
-      border-radius: 10px
+    background-color: transparent;
+    position: sticky;
+    background-color: #000000bd;
+    backdrop-filter: blur(10px);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px
   }
 
   .menu-tab ul {
-      flex-wrap: wrap;
-      padding: 1px
+    flex-wrap: wrap;
+    padding: 1px
   }
 
   .menu-tab ul li {
-      text-align: center;
-      margin: 1px
+    text-align: center;
+    margin: 1px
   }
 
   .menu-tab h1 {
-      display: none
+    display: none
   }
 }
 
@@ -408,11 +414,11 @@ Floating Notification
 
 @keyframes slide-in {
   0% {
-      transform: translateY(100%)
+    transform: translateY(100%)
   }
 
   100% {
-      transform: translateY(0)
+    transform: translateY(0)
   }
 }
 
@@ -420,6 +426,7 @@ Floating Notification
   list-style: none;
   text-align: left
 }
+
 /*
 ----------------------------------------
 Footer
@@ -439,15 +446,15 @@ Footer
 
 @keyframes gradient {
   0% {
-      background-position: 0 50%
+    background-position: 0 50%
   }
 
   50% {
-      background-position: 100% 50%
+    background-position: 100% 50%
   }
 
   100% {
-      background-position: 0 50%
+    background-position: 0 50%
   }
 }
 
@@ -505,20 +512,20 @@ Footer
 
 @keyframes float {
   0% {
-      opacity: 0;
-      color: #dcdcdc
+    opacity: 0;
+    color: #dcdcdc
   }
 
   50% {
-      opacity: 1;
-      transform: translateY(0);
-      color: #f8f8ff
+    opacity: 1;
+    transform: translateY(0);
+    color: #f8f8ff
   }
 
   100% {
-      transform: translateY(10px);
-      opacity: 0;
-      color: wheat
+    transform: translateY(10px);
+    opacity: 0;
+    color: wheat
   }
 }
 
