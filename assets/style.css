@@ -206,57 +206,7 @@ Master Navigation Panel
 }
 
 
-/*
-----------------------------------------
-Floating Notification
-----------------------------------------
-*/
 
-#notification {
-  background-color: #04aa6d;
-  color: #fff;
-  padding: 10px;
-  font-size: 18px;
-  position: fixed;
-  bottom: 20px;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
-  display: none;
-  animation: slide-in .5s ease-out;
-  padding-right: 40px;
-  margin-left: 20px;
-  z-index: 999
-}
-
-#notification .close-button {
-  position: absolute;
-  padding-left: 20px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  cursor: pointer
-}
-
-#notification .close-button:hover {
-  color: #036c45;
-  transition: .3s ease
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateY(100%)
-  }
-
-  100% {
-    transform: translateY(0)
-  }
-}
-
-.vision li {
-  list-style: none;
-  text-align: left
-}
 
 /*
 ----------------------------------------
