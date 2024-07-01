@@ -42,29 +42,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  /* Align items to the left */
   color: white;
-  text-align: center;
+  text-align: left;
+  /* Align text to the left */
   position: relative;
   overflow: hidden;
+  padding-left: 5vw;
+  /* Add some left padding to match your design */
 }
+
 /* Base styles for header text */
 .header-text {
-  text-align: center;
   font-size: 10rem;
   font-weight: 700;
-  padding: 5vh 5vw;
+  padding: 5vh 0;
+  /* Adjust padding to match design */
   color: #fff;
-  margin: 10px;
-  display: flexbox;
+  margin: 10px 0;
+  display: block;
+  /* Change to block to stack elements vertically */
   transition: all 0.5s ease;
-  height: 100vh;
 }
 
 /* Styles for white and green text in header */
 .header-text .white,
 .header-text .green {
-  text-align: center;
   display: inline;
   transition: color 0.5s ease;
 }
@@ -74,29 +78,31 @@ body {
   color: #04aa6d;
 }
 
-
 /* Hover effects for header text */
 .header-text:hover {
   transform: translateX(20px);
 }
 
-
-
 /* Responsive adjustments for header text */
 @media (max-width: 768px) {
   .header-text {
-   font-size: 3rem;
-   padding: 10vh 10vw;
+    font-size: 5rem;
+    padding: 2.5vh 0;
+  }
+
+  .description {
+    font-size: 1 rem;
   }
 }
 
 /* Animation keyframes for header text */
 @keyframes fadeIn {
   from {
-   opacity: 0;
+    opacity: 0;
   }
+
   to {
-   opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -105,57 +111,22 @@ body {
   animation: fadeIn 2s ease-out;
 }
 
-  /* Decorative elements */
-  .circle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    animation: float 5s infinite ease-in-out;
-    z-index: 1;
+.description {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  max-width: 800px;
+  line-height: 1.6;
+  text-align: left;
+  /* Align text to the left */
+  color: #dcdcdc;
+  font-family: consolas
 }
 
-.circle:nth-child(1) {
-    width: 150px;
-    height: 150px;
-    top: 10%;
-    left: 20%;
-    animation-delay: 0s;
-}
 
-.circle:nth-child(2) {
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 70%;
-    animation-delay: 2s;
-}
 
-.circle:nth-child(3) {
-    width: 200px;
-    height: 200px;
-    top: 30%;
-    left: 50%;
-    animation-delay: 4s;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-        opacity: 0.5;
-    }
-    50% {
-        transform: translateY(-20px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 0.5;
-    }
-}
 /* ----------------------------------------
   Master Navigation Panel
 ---------------------------------------- */
-
 /* Styles for navigation bar */
 .nav-bar {
   top: 0;
@@ -223,34 +194,7 @@ body {
 
 /* Responsive adjustments for navigation bar */
 @media screen and (max-width:768px) {
-  .menu-tab {
-   background-color: transparent;
-   position: sticky;
-   background-color: #000000bd;
-   backdrop-filter: blur(10px);
-   margin: 10px;
-   padding: 10px;
-   border-radius: 10px;
-  }
 
-  .menu-tab ul {
-   flex-wrap: wrap;
-   padding: 1px;
-  }
-
-  .menu-tab ul li {
-   text-align: center;
-   margin: 1px;
-  }
-
-  .menu-tab h1 {
-   display: none;
-  }
-}
-
-/* Styles for navigation bar icons */
-.nav-bar .fas {
-  margin-right: 1px;
 }
 
 
