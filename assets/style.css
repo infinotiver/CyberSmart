@@ -1,69 +1,109 @@
-/*
-----------------------------------------
-1. General Style 
-----------------------------------------
-*/
+/* ----------------------------------------
+  General Styles
+---------------------------------------- */
+
+/* Reset default padding and margin */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Body styles */
 body {
   background: #000;
   -webkit-font-smoothing: antialiased;
   font: 15px arial;
   color: #fff;
-
 }
 
 
-/*
-----------------------------------------
-[1] Selection
-----------------------------------------
-*/
+/* ----------------------------------------
+  Selection Styles
+---------------------------------------- */
+
+/* Selected text styles */
 ::selection {
   background: #fff;
-  color: #20b47e
+  color: #20b47e;
 }
 
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
-  display: none
+  display: none;
 }
 
-/*
-----------------------------------------
-[1] Misc Css
-----------------------------------------
-*/
+
+/* ----------------------------------------
+  Miscellaneous Styles
+---------------------------------------- */
+
+/* Base styles for header text */
 .header-text {
   text-align: center;
   font-size: 10rem;
   font-weight: 700;
-  padding: 30vh 20vw;
+  padding: 5vh 5vw;
   color: #fff;
   margin: 10px;
-  display:inline-flex
+  display: flexbox;
+  transition: all 0.5s ease;
+  height: 100vh;
 }
 
-.header-text .white {
-  color: #fff;
+/* Styles for white and green text in header */
+.header-text .white,
+.header-text .green {
   text-align: center;
-  display: inline
+  display: inline;
+  transition: color 0.5s ease;
 }
 
+/* Styles for green text in header */
 .header-text .green {
   color: #04aa6d;
-  text-align: center;
-  display: inline
 }
 
-/*
-----------------------------------------
-Master Navigation Panel
-----------------------------------------
-*/
+/* Hover effects for header text */
+.header-text:hover {
+  transform: translateX(20px);
+}
+
+/* Hover effects for white and green text in header */
+.header-text .white:hover,
+.header-text .green:hover {
+  color: #ccc;
+}
+
+/* Responsive adjustments for header text */
+@media (max-width: 768px) {
+  .header-text {
+   font-size: 3rem;
+   padding: 10vh 10vw;
+  }
+}
+
+/* Animation keyframes for header text */
+@keyframes fadeIn {
+  from {
+   opacity: 0;
+  }
+  to {
+   opacity: 1;
+  }
+}
+
+/* Apply animation to header text */
+.header-text {
+  animation: fadeIn 2s ease-out;
+}
+
+
+/* ----------------------------------------
+  Master Navigation Panel
+---------------------------------------- */
+
+/* Styles for navigation bar */
 .nav-bar {
   top: 0;
   left: 0;
@@ -78,125 +118,129 @@ Master Navigation Panel
   border-radius: 0 0 8px 8px;
 }
 
+/* Styles for navigation bar heading */
 .nav-bar h1 {
   color: #ffffff9d;
   font-size: 35px;
   margin-left: 10px;
   flex-grow: 1;
-  text-align:left
+  text-align: left;
 }
 
+/* Hover effects for navigation bar heading */
 .nav-bar h1:hover {
-  color: white
+  color: white;
 }
 
-
+/* Styles for navigation bar list */
 .nav-bar ul {
   display: inline-flex;
   list-style: none;
-  transition: all .3s ease-in-out 0s
+  transition: all .3s ease-in-out 0s;
 }
 
+/* Styles for navigation bar list items */
 .nav-bar ul li {
   width: 120px;
   margin: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: .5s ease
+  transition: .5s ease;
 }
 
+/* Styles for navigation bar links */
 .nav-bar ul li a {
   text-decoration: none;
   color: #989b9a;
-  font-size: 15px
+  font-size: 15px;
 }
 
-.nav-bar ul :hover {
-  color: #fff;
-  a {
-    color: white
-  }
-}
-
-@media screen and (max-width:768px) {
-  .menu-tab {
-    background-color: transparent;
-    position: sticky;
-    background-color: #000000bd;
-    backdrop-filter: blur(10px);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px
-  }
-
-  .menu-tab ul {
-    flex-wrap: wrap;
-    padding: 1px
-  }
-
-  .menu-tab ul li {
-    text-align: center;
-    margin: 1px
-  }
-
-  .menu-tab h1 {
-    display: none
-  }
-}
-
-.nav-bar .fas {
-  margin-right: 1px
-}
-
+/* Hover effects for navigation bar list items */
 .nav-bar ul li:hover {
   background-color: #04aa6d;
   border-radius: 50px;
-  box-shadow: 0 0 20px 15px #036c45
+  box-shadow: 0 0 20px 15px #036c45;
+}
+
+/* Hover effects for navigation bar links */
+.nav-bar ul li:hover a {
+  color: white;
 }
 
 
+/* Responsive adjustments for navigation bar */
+@media screen and (max-width:768px) {
+  .menu-tab {
+   background-color: transparent;
+   position: sticky;
+   background-color: #000000bd;
+   backdrop-filter: blur(10px);
+   margin: 10px;
+   padding: 10px;
+   border-radius: 10px;
+  }
+
+  .menu-tab ul {
+   flex-wrap: wrap;
+   padding: 1px;
+  }
+
+  .menu-tab ul li {
+   text-align: center;
+   margin: 1px;
+  }
+
+  .menu-tab h1 {
+   display: none;
+  }
+}
+
+/* Styles for navigation bar icons */
+.nav-bar .fas {
+  margin-right: 1px;
+}
 
 
-/*
-----------------------------------------
-Footer
-----------------------------------------
-*/
+/* ----------------------------------------
+  Footer
+---------------------------------------- */
 
+/* Styles for footer */
 .footer {
   background: linear-gradient(to right, #036c45, #0452aa, #048c5c, #04aa6d, #20b47e, #105072);
   background-size: 600% 600%;
-  border-radius: 5px;
-  margin: 0;
+  border-radius: 8px;
+  left: 0;
+  margin: 12px;
   animation: gradient 10s ease infinite;
   padding: 50px;
   text-size-adjust: auto;
-  margin-top: 50px
 }
 
+/* Animation keyframes for footer gradient */
 @keyframes gradient {
   0% {
-    background-position: 0 50%
+   background-position: 0 50%;
   }
-
   50% {
-    background-position: 100% 50%
+   background-position: 100% 50%;
   }
-
   100% {
-    background-position: 0 50%
+   background-position: 0 50%;
   }
 }
 
-.footericons {
+/* Styles for footer icons */
+.footer-icons {
   text-decoration: none;
   color: #fff;
   align-items: center;
   justify-content: center;
-  text-align: center
+  text-align: center;
 }
 
-.footericons i {
+/* Styles for footer icon elements */
+.footer-icons i {
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -206,11 +250,12 @@ Footer
   margin: 5px;
   color: #fff;
   background: #0000005e;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
-.footericons i:hover {
+/* Hover effects for footer icons */
+.footer-icons i:hover {
   background: #ffffff5e;
   border-radius: 50%;
-  color: #000
+  color: #ffffff;
 }
