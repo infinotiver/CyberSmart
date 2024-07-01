@@ -44,15 +44,7 @@ h1 {
   color: #fff;
 }
 
-.rotatingtext {
-  text-align: center;
-  margin-left: 50px;
-  font-size: 40px;
-  font-weight: 500;
-  background: -webkit-linear-gradient(25deg, #04aa6d, #036c45, #20b47e, #048c5c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent
-}
+
 
 body::after,
 body::before {
