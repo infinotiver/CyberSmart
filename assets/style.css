@@ -12,13 +12,10 @@ body {
   background: #000;
   -webkit-font-smoothing: antialiased;
   font: 15px arial;
-  color: #fff
+  color: #fff;
+
 }
 
-h1 {
-  color: #ebebeb;
-  text-align: left
-}
 
 /*
 ----------------------------------------
@@ -86,6 +83,7 @@ Master Navigation Panel
   font-size: 35px;
   margin-left: 10px;
   flex-grow: 1;
+  text-align:left
 }
 
 .nav-bar h1:hover {
