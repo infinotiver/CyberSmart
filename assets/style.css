@@ -68,12 +68,12 @@ body {
 .header-text:hover {
   transform: translateX(20px);
 }
-
-/* Hover effects for white and green text in header */
-.header-text .white:hover,
-.header-text .green:hover {
-  color: #ccc;
+/* Hover effects for header text */
+.header-text:hover {
+  transform: translateX(20px);
 }
+
+
 
 /* Responsive adjustments for header text */
 @media (max-width: 768px) {
