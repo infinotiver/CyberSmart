@@ -39,16 +39,24 @@ h1 {
 [1] Misc Css
 ----------------------------------------
 */
-.hal {
+.header-text {
   text-align: center;
-  margin-left: 50px;
   font-size: 10rem;
   font-weight: 700;
-  padding-bottom: 10px;
+  padding:30vh 20vw;
   color: #fff;
+  margin:10px
 }
-
-
+.header-text .white {
+  color:#fff;
+  text-align:center;
+  display:inline
+}
+.header-text .green {
+  color:#04aa6d;
+  text-align:center;
+  display:inline
+}
 
 /*
 ----------------------------------------
