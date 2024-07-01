@@ -37,7 +37,17 @@ body {
 /* ----------------------------------------
   Miscellaneous Styles
 ---------------------------------------- */
-
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 /* Base styles for header text */
 .header-text {
   text-align: center;
@@ -64,10 +74,7 @@ body {
   color: #04aa6d;
 }
 
-/* Hover effects for header text */
-.header-text:hover {
-  transform: translateX(20px);
-}
+
 /* Hover effects for header text */
 .header-text:hover {
   transform: translateX(20px);
@@ -98,7 +105,53 @@ body {
   animation: fadeIn 2s ease-out;
 }
 
+  /* Decorative elements */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 5s infinite ease-in-out;
+    z-index: 1;
+}
 
+.circle:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 50%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+}
 /* ----------------------------------------
   Master Navigation Panel
 ---------------------------------------- */
