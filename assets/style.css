@@ -205,6 +205,19 @@ body {
 @media screen and (max-width:768px) {}
 
 
+#circle1 {
+  color: white;
+  border-radius: 100%;
+  border: 2px dotted var(--accent);
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  right: -100px;
+  top: 125px;
+}
+
+
 /* ----------------------------------------
   Footer
 ---------------------------------------- */
