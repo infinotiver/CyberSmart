@@ -1,3 +1,11 @@
+:root {
+  --text: #ffffff;
+  --background: #0e0202;
+  --primary: #20b47e;
+  --secondary: #138853;
+  --accent: #04aa6d;
+}
+
 /* ----------------------------------------
   General Styles
 ---------------------------------------- */
@@ -10,10 +18,10 @@
 
 /* Body styles */
 body {
-  background: #000;
+  background: var(--background);
   -webkit-font-smoothing: antialiased;
   font: 15px arial;
-  color: #fff;
+  color: var(--text);
 }
 
 
@@ -23,8 +31,8 @@ body {
 
 /* Selected text styles */
 ::selection {
-  background: #fff;
-  color: #20b47e;
+  background: var(--background);
+  color: var(--primary);
 }
 
 /* Scrollbar styles */
@@ -44,7 +52,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   /* Align items to the left */
-  color: white;
+  color: var(--text);
   text-align: left;
   /* Align text to the left */
   position: relative;
@@ -59,7 +67,7 @@ body {
   font-weight: 700;
   padding: 5vh 0;
   /* Adjust padding to match design */
-  color: #fff;
+  color: var(--text);
   margin: 10px 0;
   display: block;
   /* Change to block to stack elements vertically */
@@ -75,7 +83,7 @@ body {
 
 /* Styles for green text in header */
 .header-text .green {
-  color: #04aa6d;
+  color: var(--accent);
 }
 
 /* Hover effects for header text */
@@ -91,7 +99,7 @@ body {
   }
 
   .description {
-    font-size: 1 rem;
+    font-size: 1rem;
   }
 }
 
@@ -118,8 +126,8 @@ body {
   line-height: 1.6;
   text-align: left;
   /* Align text to the left */
-  color: #dcdcdc;
-  font-family: consolas
+  color: var(--text);
+  font-family: consolas;
 }
 
 
@@ -129,6 +137,7 @@ body {
 ---------------------------------------- */
 /* Styles for navigation bar */
 .nav-bar {
+  font-family: "Roboto Mono", monospace;
   top: 0;
   left: 0;
   z-index: 999;
@@ -144,7 +153,7 @@ body {
 
 /* Styles for navigation bar heading */
 .nav-bar h1 {
-  color: #ffffff9d;
+  color: var(--text);
   font-size: 35px;
   margin-left: 10px;
   flex-grow: 1;
@@ -153,7 +162,7 @@ body {
 
 /* Hover effects for navigation bar heading */
 .nav-bar h1:hover {
-  color: white;
+  color: var(--text);
 }
 
 /* Styles for navigation bar list */
@@ -175,27 +184,25 @@ body {
 /* Styles for navigation bar links */
 .nav-bar ul li a {
   text-decoration: none;
-  color: #989b9a;
+  color: var(--secondary);
   font-size: 15px;
 }
 
 /* Hover effects for navigation bar list items */
 .nav-bar ul li:hover {
-  background-color: #04aa6d;
+  background-color: var(--accent);
   border-radius: 50px;
-  box-shadow: 0 0 20px 15px #036c45;
+  box-shadow: 0 0 20px 15px var(--secondary);
 }
 
 /* Hover effects for navigation bar links */
 .nav-bar ul li:hover a {
-  color: white;
+  color: var(--text);
 }
 
 
 /* Responsive adjustments for navigation bar */
-@media screen and (max-width:768px) {
-
-}
+@media screen and (max-width:768px) {}
 
 
 /* ----------------------------------------
@@ -245,7 +252,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #fff;
+  color: var(--text);
   margin: 10px;
   transition: .5s ease;
 }
@@ -254,17 +261,17 @@ body {
   font-size: 25px;
   padding: 5px;
   margin: 5px;
-  color: #fff;
-  background: #0000005e;
+  color: var(--text);
+  background: var(--background);
   border-radius: 50%;
   transition: .5s ease;
 }
 
 /* Hover effects for footer icons */
 .footer-icons a:hover {
-  background: #ffffff5e;
+  background: var(--background);
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--text);
   animation: pulse 1s ease infinite;
 }
 
@@ -286,7 +293,7 @@ body {
 .footer-text {
   text-align: center;
   font-size: 20px;
-  color: #fff;
+  color: var(--text);
   animation: fade 1s ease infinite;
 }
 
