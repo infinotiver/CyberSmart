@@ -107,17 +107,7 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-/* Responsive adjustments for header text */
-@media (max-width: 768px) {
-  .header-text {
-    font-size: 5rem;
-    padding: 2.5vh 0;
-  }
 
-  .description {
-    font-size: 1rem;
-  }
-}
 
 /* Animation keyframes for header text */
 @keyframes fadeIn {
@@ -133,8 +123,6 @@ body {
 .rotating-text {
   display: inline-block;
   position: relative;
-  white-space: nowrap;
-  overflow: hidden;
   font-size: 2rem;
   font-family: "Roboto Mono", monospace;
   color: var(--accent);
@@ -158,7 +146,20 @@ body {
     opacity: 0;
   }
 }
+/* Responsive adjustments for header text */
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 5rem;
+    padding: 2.5vh 0;
+  }
 
+  .description {
+    font-size: 1rem;
+  }
+  .rotating-text {
+    font-size: 1.2rem
+  }
+}
 
 /* ----------------------------------------
   Master Navigation Panel
