@@ -99,3 +99,10 @@ function rotateText() {
 
 document.addEventListener("DOMContentLoaded", rotateText);
 
+// JavaScript for responsive navigation menu
+const menuIcon = document.querySelector(".menu-icon");
+const navList = document.querySelector(".nav-bar ul");
+
+menuIcon.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});

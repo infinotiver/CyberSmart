@@ -228,7 +228,57 @@ body {
 .nav-bar ul li:hover a {
   color: var(--text);
 }
+.nav-bar .menu-icon {
+  display:none
+}
+/* Media query for responsive design */
+@media (max-width: 900px) {
+  .nav-bar {
+    justify-content: space-between;
+    padding: 10px;
+  }
 
+  .nav-bar h1 {
+    margin-left: 0;
+    font-size: 25px;
+  }
+
+  .nav-bar ul {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .nav-bar ul.active {
+    left: 0;
+  }
+
+  .nav-bar ul li {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-bar ul li a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .nav-bar .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    color: gray;
+  }
+  .nav-bar .menu-icon {
+    display:flex
+  }
+}
 
 
 #circle1 {
