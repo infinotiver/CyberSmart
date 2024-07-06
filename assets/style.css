@@ -1,4 +1,5 @@
 :root {
+  /* Color variables */
   --text: #ebf5f3;
   --background: #0d1b18;
   --primary: #a4d7cc;
@@ -24,7 +25,6 @@ body {
   color: var(--text);
 }
 
-
 /* ----------------------------------------
   Selection Styles
 ---------------------------------------- */
@@ -41,24 +41,21 @@ body {
   display: none;
 }
 
-
 /* ----------------------------------------
-  Miscellaneous Styles
+  Header Styles
 ---------------------------------------- */
+
 .header {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* Align items to the left */
   color: var(--text);
   text-align: left;
-  /* Align text to the left */
   position: relative;
   overflow: hidden;
   padding-left: 5vw;
-  /* Add some left padding to match your design */
 }
 
 /* Base styles for header text */
@@ -67,11 +64,9 @@ body {
   font-size: 10rem;
   font-weight: 700;
   padding: 5vh 0;
-  /* Adjust padding to match design */
   color: var(--text);
   margin: 10px 0;
   display: block;
-  /* Change to block to stack elements vertically */
   transition: all 0.5s ease;
 }
 
@@ -97,6 +92,7 @@ body {
   animation: fadeIn 2s ease-out;
 }
 
+/* Description styles */
 .description {
   font-size: 1.5rem;
   margin-top: 10px;
@@ -107,19 +103,17 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-
-
 /* Animation keyframes for header text */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
 
+/* Rotating text styles */
 .rotating-text {
   display: inline-block;
   position: relative;
@@ -131,7 +125,7 @@ body {
 .rotating-text::after {
   content: '';
   display: inline-block;
-  width: 2px; 
+  width: 2px;
   height: 100%;
   vertical-align: middle;
   background-color: #f0f0f0;
@@ -146,24 +140,25 @@ body {
     opacity: 0;
   }
 }
+
 /* Responsive adjustments for header text */
 @media (max-width: 768px) {
   .header-text {
     font-size: 5rem;
     padding: 2.5vh 0;
   }
-
   .description {
     font-size: 1rem;
   }
   .rotating-text {
-    font-size: 1.2rem
+    font-size: 1.2rem;
   }
 }
 
 /* ----------------------------------------
   Master Navigation Panel
 ---------------------------------------- */
+
 /* Styles for navigation bar */
 .nav-bar {
   font-family: "Roboto Mono", monospace;
@@ -228,21 +223,22 @@ body {
 .nav-bar ul li:hover a {
   color: var(--text);
 }
+
+/* Menu icon styles */
 .nav-bar .menu-icon {
-  display:none
+  display: none;
 }
+
 /* Media query for responsive design */
 @media (max-width: 900px) {
   .nav-bar {
     justify-content: space-between;
     padding: 10px;
   }
-
   .nav-bar h1 {
     margin-left: 0;
     font-size: 25px;
   }
-
   .nav-bar ul {
     position: fixed;
     top: 60px;
@@ -253,22 +249,18 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     transition: all 0.3s ease;
   }
-
   .nav-bar ul.active {
     left: 0;
   }
-
   .nav-bar ul li {
     width: 100%;
     margin: 10px 0;
     text-align: center;
   }
-
   .nav-bar ul li a {
     font-size: 20px;
     color: white;
   }
-
   .nav-bar .menu-icon {
     display: block;
     cursor: pointer;
@@ -276,10 +268,13 @@ body {
     color: gray;
   }
   .nav-bar .menu-icon {
-    display:flex
+    display: flex;
   }
 }
 
+/* ----------------------------------------
+  Circle Styles
+---------------------------------------- */
 
 #circle1 {
   color: white;
@@ -296,11 +291,8 @@ body {
   transition: transform 0.5s ease;
 }
 
-
-
-
 /* ----------------------------------------
-  Footer
+  Footer Styles
 ---------------------------------------- */
 
 /* Styles for footer */
@@ -322,11 +314,9 @@ body {
   0% {
     background-position: 0 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0 50%;
   }
@@ -373,11 +363,9 @@ body {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.2);
   }
-
   100% {
     transform: scale(1);
   }
@@ -395,11 +383,9 @@ body {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: .5;
   }
-
   100% {
     opacity: 1;
   }
