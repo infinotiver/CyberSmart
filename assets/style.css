@@ -108,6 +108,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -133,9 +134,12 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -147,9 +151,11 @@ body {
     font-size: 5rem;
     padding: 2.5vh 0;
   }
+
   .description {
     font-size: 1rem;
   }
+
   .rotating-text {
     font-size: 1.2rem;
   }
@@ -235,10 +241,12 @@ body {
     justify-content: space-between;
     padding: 10px;
   }
+
   .nav-bar h1 {
     margin-left: 0;
     font-size: 25px;
   }
+
   .nav-bar ul {
     position: fixed;
     top: 60px;
@@ -249,24 +257,29 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     transition: all 0.3s ease;
   }
+
   .nav-bar ul.active {
     left: 0;
   }
+
   .nav-bar ul li {
     width: 100%;
     margin: 10px 0;
     text-align: center;
   }
+
   .nav-bar ul li a {
     font-size: 20px;
     color: white;
   }
+
   .nav-bar .menu-icon {
     display: block;
     cursor: pointer;
     font-size: 25px;
     color: gray;
   }
+
   .nav-bar .menu-icon {
     display: flex;
   }
@@ -314,9 +327,11 @@ body {
   0% {
     background-position: 0 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0 50%;
   }
@@ -363,9 +378,11 @@ body {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
@@ -383,9 +400,11 @@ body {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: .5;
   }
+
   100% {
     opacity: 1;
   }
