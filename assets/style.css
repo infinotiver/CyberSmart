@@ -130,7 +130,34 @@ body {
   }
 }
 
+.rotating-text {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  color: var(--accent);
+}
 
+.rotating-text::after {
+  content: '';
+  display: inline-block;
+  width: 2px; 
+  height: 100%;
+  vertical-align: middle;
+  background-color: #f0f0f0;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
 
 /* ----------------------------------------
@@ -202,8 +229,6 @@ body {
 }
 
 
-/* Responsive adjustments for navigation bar */
-@media screen and (max-width:768px) {}
 
 #circle1 {
   color: white;

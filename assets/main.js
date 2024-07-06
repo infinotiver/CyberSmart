@@ -54,3 +54,48 @@ function applyRotationOnScroll() {
 }
 
 applyRotationOnScroll();
+function rotateText() {
+    const rotatingText = document.querySelector('.rotating-text');
+    const words = [
+        "Secure Your Digital Life",
+        "Stay Safe in the Online World",
+        "Defend Against Cyber Threats",
+        "Unlock Your Cyber IQ",
+        "Explore the World of Cybersecurity",
+        "Guard Your Digital Identity",
+        "Navigate the Web Safely",
+        "Master Cyber Hygiene",
+        "Discover Cybersecurity Best Practices"
+    ];
+    let index = 0;
+    let letterIndex = 0;
+    let intervalId = null;
+
+    const typeLetter = () => {
+        rotatingText.textContent += words[index][letterIndex];
+        letterIndex++;
+        if (letterIndex === words[index].length) {
+            clearInterval(intervalId);
+            setTimeout(() => {
+                intervalId = setInterval(eraseLetter, 50);
+            }, 1000);
+        }
+    };
+
+    const eraseLetter = () => {
+        rotatingText.textContent = rotatingText.textContent.slice(0, -1);
+        if (rotatingText.textContent === "") {
+            clearInterval(intervalId);
+            index = (index + 1) % words.length;
+            letterIndex = 0;
+            setTimeout(() => {
+                intervalId = setInterval(typeLetter, 100);
+            }, 500);
+        }
+    };
+
+    intervalId = setInterval(typeLetter, 100);
+}
+
+document.addEventListener("DOMContentLoaded", rotateText);
+
