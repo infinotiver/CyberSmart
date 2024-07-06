@@ -44,3 +44,13 @@ function handleScroll(event) {
 }
 
 window.addEventListener('wheel', handleScroll);
+
+
+function applyRotationOnScroll() {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        document.getElementById('circle1').style.transform = `rotate(${scrolled}deg)`;
+    });
+}
+
+applyRotationOnScroll();

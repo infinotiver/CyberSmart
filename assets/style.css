@@ -1,9 +1,9 @@
 :root {
-  --text: #ffffff;
-  --background: #080707;
-  --primary: #20b47e;
-  --secondary: #138853;
-  --accent: #04aa6d;
+  --text: #ebf5f3;
+  --background: #0d1b18;
+  --primary: #a4d7cc;
+  --secondary: #337a6a;
+  --accent: #58bea7;
 }
 
 /* ----------------------------------------
@@ -63,6 +63,7 @@ body {
 
 /* Base styles for header text */
 .header-text {
+  font-family: "Inter", sans-serif;
   font-size: 10rem;
   font-weight: 700;
   padding: 5vh 0;
@@ -91,6 +92,21 @@ body {
   transform: translateX(20px);
 }
 
+/* Apply animation to header text */
+.header-text {
+  animation: fadeIn 2s ease-out;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  max-width: 800px;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--text);
+  font-family: "Roboto Mono", monospace;
+}
+
 /* Responsive adjustments for header text */
 @media (max-width: 768px) {
   .header-text {
@@ -114,21 +130,6 @@ body {
   }
 }
 
-/* Apply animation to header text */
-.header-text {
-  animation: fadeIn 2s ease-out;
-}
-
-.description {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  max-width: 800px;
-  line-height: 1.6;
-  text-align: left;
-  /* Align text to the left */
-  color: var(--text);
-  font-family: consolas;
-}
 
 
 
@@ -204,18 +205,22 @@ body {
 /* Responsive adjustments for navigation bar */
 @media screen and (max-width:768px) {}
 
-
 #circle1 {
   color: white;
   border-radius: 100%;
-  border: 2px dotted var(--accent);
+  border: 2px dashed var(--accent);
+  border-spacing: 5px;
   position: absolute;
   width: 500px;
   height: 500px;
-
   right: -100px;
   top: 125px;
+  overflow: hidden;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
 }
+
+
 
 
 /* ----------------------------------------
