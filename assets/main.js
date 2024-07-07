@@ -48,7 +48,8 @@ window.addEventListener('wheel', handleScroll);
 
 function applyRotationOnScroll() {
     window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
+        const scrolled = window.scrollY/360;
+        console.log(scrolled);
         document.getElementById('circle1').style.transform = `rotate(${scrolled}deg)`;
     });
 }
