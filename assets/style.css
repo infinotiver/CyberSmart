@@ -194,21 +194,71 @@ body {
 .nav-bar h1:hover {
   color: var(--text);
 }
+/* Styles for navigation bar */
+.nav-bar {
+  font-family: "Roboto Mono", monospace;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Styles for navigation bar heading */
+.nav-bar h1 {
+  color: gray;
+  font-size: 35px;
+  margin-left: 10px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Hover effects for navigation bar heading */
+.nav-bar h1:hover {
+  color: var(--text);
+}
 
 /* Styles for navigation bar list */
 .nav-bar ul {
   display: inline-flex;
   list-style: none;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Styles for navigation bar list items */
 .nav-bar ul li {
+  position: relative;
   width: 120px;
   margin: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: .5s ease;
+  transition: 0.5s ease;
+}
+
+/* Styles for navigation bar list items with ::before pseudo-element */
+.nav-bar ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  background-color: var(--accent);
+  transition: transform 0.3s ease-out;
+  transform-origin: right;
+}
+
+/* Hover effects for navigation bar list items with ::before pseudo-element */
+.nav-bar ul li:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* Styles for navigation bar links */
@@ -216,13 +266,7 @@ body {
   text-decoration: none;
   color: var(--secondary);
   font-size: 15px;
-}
-
-/* Hover effects for navigation bar list items */
-.nav-bar ul li:hover {
-  background-color: var(--accent);
-  border-radius: 50px;
-  box-shadow: 0 0 20px 15px var(--secondary);
+  transition: color 0.3s ease;
 }
 
 /* Hover effects for navigation bar links */
@@ -234,6 +278,7 @@ body {
 .nav-bar .menu-icon {
   display: none;
 }
+
 
 /* Media query for responsive design */
 @media (max-width: 900px) {
