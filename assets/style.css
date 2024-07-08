@@ -61,7 +61,7 @@ body {
 /* Base styles for header text */
 .header-text {
   font-family: "Inter", sans-serif;
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 700;
   padding: 5vh 0;
   color: var(--text);
@@ -94,7 +94,6 @@ body {
 
 /* Description styles */
 .description {
-  font-size: 1.5rem;
   margin-top: 10px;
   max-width: 800px;
   line-height: 1.6;
@@ -118,7 +117,7 @@ body {
 .rotating-text {
   display: inline-block;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Roboto Mono", monospace;
   color: var(--accent);
 }
@@ -133,6 +132,22 @@ body {
   animation: blink 0.75s step-end infinite;
 }
 
+.cta-button {
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  border: 2px solid var(--secondary);
+  transition: 0.4s all ease-in-out;
+  cursor:pointer;
+}
+.cta-button a {
+  color: var(--text);
+  text-decoration: none
+
+}
+.cta-button:hover {
+  background-color: var(--secondary)
+}
 @keyframes blink {
 
   0%,
@@ -369,16 +384,17 @@ body {
   color: white;
   border-radius: 100%;
   border: 2px dashed var(--accent);
-  border-spacing: 5px;
   position: absolute;
   width: 500px;
   height: 500px;
-  right: -100px;
-  top: 125px;
+  right: -10vw;
+  top: 12.5vh;
   overflow: hidden;
   transform: rotate(0deg);
   transition: transform 0.5s ease;
 }
+
+/* Section: 
 
 /* ----------------------------------------
   Footer Styles
