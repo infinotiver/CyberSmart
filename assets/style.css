@@ -173,22 +173,6 @@ body {
   Master Navigation Panel
 ---------------------------------------- */
 
-/* Styles for navigation bar */
-.nav-bar {
-  font-family: "Roboto Mono", monospace;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  position: sticky;
-  background-color: transparent;
-  backdrop-filter: blur(50px);
-  padding: 8px;
-  border-radius: 0 0 8px 8px;
-}
-
 
 /* Hover effects for navigation bar heading */
 .nav-bar h1:hover {
@@ -407,5 +391,113 @@ body {
 
   100% {
     opacity: 1;
+  }
+}
+
+
+/* Responsive adjustments for 992px and below */
+@media (max-width: 992px) {
+  .header-text {
+    font-size: 6rem;
+    padding: 2.5vh 0;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .rotating-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-bar {
+    justify-content: space-between;
+    padding: 6px;
+  }
+
+  .nav-bar h1 {
+    margin-left: 0;
+    font-size: 1.5625rem;
+  }
+
+  .nav-bar ul {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .nav-bar ul.active {
+    left: 0;
+  }
+
+  .nav-bar ul li {
+    width: 100%;
+    margin: 0.625rem 0;
+    text-align: center;
+  }
+
+  .nav-bar ul li a {
+    font-size: 1.25rem;
+    color: white;
+  }
+
+  .nav-bar .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: gray;
+  }
+}
+
+/* Responsive adjustments for 768px and below */
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 4rem;
+    padding: 2vh 0;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .rotating-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive adjustments for 576px and below */
+@media (max-width: 576px) {
+  .header-text {
+    font-size: 3.25rem;
+    padding: 2vh 0;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .rotating-text-container {
+    display: none
+  }
+}
+
+/* Responsive adjustments for 400px and below */
+@media (max-width: 400px) {
+  .header-text {
+    font-size: 2.5rem;
+    padding: 1.5vh 0;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .rotating-text-container {
+    display: none
   }
 }
