@@ -58,15 +58,13 @@ applyRotationOnScroll();
 function rotateText() {
     const rotatingText = document.querySelector('.rotating-text');
     const words = [
-        "Secure Your Digital Life",
-        "Stay Safe in the Online World",
-        "Defend Against Cyber Threats",
-        "Unlock Your Cyber IQ",
-        "Explore the World of Cybersecurity",
-        "Guard Your Digital Identity",
-        "Navigate the Web Safely",
-        "Master Cyber Hygiene",
-        "Discover Cybersecurity Best Practices"
+        "offers the latest cybersecurity news.",
+        "provides in-depth cybersecurity blogs.",
+        "promotes cybersecurity awareness.",
+        "delivers tips on protecting personal data.",
+        "keeps you updated on cyber threats.",
+        "educates about online safety practices.",
+        "curates resources for digital security.",
     ];
     let index = 0;
     let letterIndex = 0;
