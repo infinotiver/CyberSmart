@@ -40,7 +40,19 @@ body {
   width: 10px;
   display: none;
 }
-
+.bg-effect {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent), #000000);
+  filter: blur(100px);
+  opacity: 0.25;
+  z-index: -1;
+}
 /* ----------------------------------------
   Header Styles
 ---------------------------------------- */
