@@ -320,7 +320,7 @@ body {
   font-size: 2.5rem;
   position: relative;
   width: 100%;
-  max-width: 50vw;
+  max-width: 60vw;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -545,6 +545,12 @@ body {
     font-size: 1.4rem;
     color: gray;
   }
+
+  .middle-text .stats {
+    padding: 12px;
+    font-size: 2.2rem;
+
+  }
 }
 
 /* Responsive adjustments for 768px and below */
@@ -560,6 +566,10 @@ body {
 
   .rotating-text {
     font-size: 1.1rem;
+  }
+  .middle-text .stats {
+    padding: 10px;
+    font-size: 2rem;
   }
 }
 
@@ -592,5 +602,13 @@ body {
 
   .rotating-text-container {
     display: none
+  }
+  .middle-text .stats {
+    padding: 6px;
+    font-size: 1.6rem;
+    max-width: 100vw;
+  }
+  .middle-text .stats cite {
+    font-size: 0.6rem;
   }
 }
