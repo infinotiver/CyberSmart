@@ -1,107 +1,90 @@
-let isScrolling = false;
-
-function smoothScrollTo(targetPosition, duration) {
-    const startPosition = window.scrollY;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) {
-            requestAnimationFrame(animation);
-        } else {
-            isScrolling = false; // Enable new scroll events after the animation
-        }
-    }
-
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation);
-}
 
 function handleScroll(event) {
-    if (isScrolling) return; // Prevent new scroll events during animation
+  if (isScrolling) return; // Prevent new scroll events during animation
 
-    isScrolling = true;
-    const viewportHeight = window.innerHeight;
-    const currentPosition = window.scrollY;
-    const scrollDirection = event.deltaY > 0 ? 1 : -1;
-    const targetPosition = currentPosition + (viewportHeight * scrollDirection);
+  isScrolling = true;
+  const viewportHeight = window.innerHeight;
+  const currentPosition = window.scrollY;
+  const scrollDirection = event.deltaY > 0 ? 1 : -1;
+  const targetPosition = currentPosition + (viewportHeight * scrollDirection);
 
-    // Ensure targetPosition is within the document bounds
-    const maxScrollPosition = document.body.scrollHeight - viewportHeight;
-    const finalPosition = Math.max(0, Math.min(targetPosition, maxScrollPosition));
+  // Ensure targetPosition is within the document bounds
+  const maxScrollPosition = document.body.scrollHeight - viewportHeight;
+  const finalPosition = Math.max(0, Math.min(targetPosition, maxScrollPosition));
 
-    smoothScrollTo(finalPosition, 500); // Smooth scroll to the target position in 500ms
+  smoothScrollTo(finalPosition, 500); // Smooth scroll to the target position in 500ms
 }
 
 window.addEventListener('wheel', handleScroll);
 
 
 function applyRotationOnScroll() {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY/360;
-        console.log(scrolled);
-        document.getElementById('circle1').style.transform = `rotate(${scrolled}deg)`;
-    });
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY / 360;
+    console.log(scrolled);
+    document.getElementById('circle1').style.transform = `rotate(${scrolled}deg)`;
+  });
 }
 
 applyRotationOnScroll();
 function rotateText() {
-    const rotatingText = document.querySelector('.rotating-text');
-    const words = [
-        "offers the latest cybersecurity news.",
-        "provides in-depth cybersecurity blogs.",
-        "promotes cybersecurity awareness.",
-        "delivers tips on protecting personal data.",
-        "keeps you updated on cyber threats.",
-        "educates about online safety practices.",
-        "curates resources for digital security.",
-    ];
-    let index = 0;
-    let letterIndex = 0;
-    let intervalId = null;
+  const rotatingText = document.querySelector('.rotating-text');
+  const words = [
+    "offers the latest cybersecurity news.",
+    "provides in-depth cybersecurity blogs.",
+    "promotes cybersecurity awareness.",
+    "delivers tips on protecting personal data.",
+    "keeps you updated on cyber threats.",
+    "educates about online safety practices.",
+    "curates resources for digital security.",
+  ];
+  let index = 0;
+  let letterIndex = 0;
+  let intervalId = null;
 
-    const typeLetter = () => {
-        rotatingText.textContent += words[index][letterIndex];
-        letterIndex++;
-        if (letterIndex === words[index].length) {
-            clearInterval(intervalId);
-            setTimeout(() => {
-                intervalId = setInterval(eraseLetter, 50);
-            }, 1000);
-        }
-    };
+  const typeLetter = () => {
+    rotatingText.textContent += words[index][letterIndex];
+    letterIndex++;
+    if (letterIndex === words[index].length) {
+      clearInterval(intervalId);
+      setTimeout(() => {
+        intervalId = setInterval(eraseLetter, 50);
+      }, 1000);
+    }
+  };
 
-    const eraseLetter = () => {
-        rotatingText.textContent = rotatingText.textContent.slice(0, -1);
-        if (rotatingText.textContent === "") {
-            clearInterval(intervalId);
-            index = (index + 1) % words.length;
-            letterIndex = 0;
-            setTimeout(() => {
-                intervalId = setInterval(typeLetter, 100);
-            }, 500);
-        }
-    };
+  const eraseLetter = () => {
+    rotatingText.textContent = rotatingText.textContent.slice(0, -1);
+    if (rotatingText.textContent === "") {
+      clearInterval(intervalId);
+      index = (index + 1) % words.length;
+      letterIndex = 0;
+      setTimeout(() => {
+        intervalId = setInterval(typeLetter, 100);
+      }, 500);
+    }
+  };
 
-    intervalId = setInterval(typeLetter, 100);
+  intervalId = setInterval(typeLetter, 100);
 }
 
-document.addEventListener("DOMContentLoaded", rotateText);
+document.addEventListener('DOMContentLoaded', () => {
+  const statsElement = document.querySelector('.middle-text .stats');
+  let isVisible = false;
 
-// JavaScript for responsive navigation menu
-const menuIcon = document.querySelector(".menu-icon");
-const navList = document.querySelector(".nav-bar ul");
+  const handleScroll = () => {
+    const rect = statsElement.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight && !isVisible) {
+      statsElement.classList.remove('hidden');
+      statsElement.classList.add('visible');
+      isVisible = true;
+    } else if ((rect.top < 0 || rect.bottom > window.innerHeight) && isVisible) {
+      statsElement.classList.remove('visible');
+      statsElement.classList.add('hidden');
+      isVisible = false;
+    }
+  };
 
-menuIcon.addEventListener("click", () => {
-  navList.classList.toggle("active");
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check in case the element is already in view
 });
