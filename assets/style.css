@@ -472,6 +472,11 @@ body {
   animation: gradient 10s ease infinite;
 }
 
+.disclaimer {
+  color: lightgray;
+  text-align: center;
+}
+
 /* Animation keyframes for footer gradient */
 @keyframes gradient {
   0% {
