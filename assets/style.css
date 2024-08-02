@@ -475,6 +475,7 @@ body {
 .disclaimer {
   color: lightgray;
   text-align: center;
+  font-size: 0.8em;
 }
 
 /* Animation keyframes for footer gradient */
