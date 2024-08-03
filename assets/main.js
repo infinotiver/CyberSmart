@@ -88,6 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Initial check in case the element is already in view
 });
+// JavaScript for responsive navigation menu
+const menuIcon = document.querySelector(".menu-icon");
+const navList = document.querySelector(".nav-bar ul");
+
+menuIcon.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
 
 document.addEventListener('scroll', function() {
   const navBar = document.querySelector('.nav-bar');
