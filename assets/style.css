@@ -188,7 +188,9 @@ body {
   Master Navigation Panel
 ---------------------------------------- */
 
-
+.nav-bar h1 {
+  font-family: "Inter";
+}
 /* Hover effects for navigation bar heading */
 .nav-bar h1:hover {
   color: var(--text);
@@ -196,8 +198,8 @@ body {
 
 /* Styles for navigation bar */
 .nav-bar {
-  font-family: "Roboto Mono", monospace;
-  top: 0;
+  font-family: "Inter";
+  top: 0px;
   left: 0;
   z-index: 999;
   display: flex;
@@ -205,9 +207,9 @@ body {
   text-align: center;
   position: sticky;
   background-color: transparent;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(10px);
   padding: 8px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 24px;
 }
 
 /* Styles for navigation bar heading */
