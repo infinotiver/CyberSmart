@@ -208,7 +208,7 @@ body {
 /* Additional styles when scrolled */
 .nav-bar.scrolled {
   top: 10px;
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
   background-color: #1f1f1f80;
   backdrop-filter: blur(10px);
@@ -235,10 +235,8 @@ body {
 /* Styles for navigation bar list items */
 .nav-bar ul li {
   position: relative;
-  width: 120px;
   margin: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding:  6px 10px;
   transition: 0.5s ease;
 }
 
@@ -274,14 +272,31 @@ body {
 .nav-bar ul a:hover {
   color: var(--text);
 }
+.nav-bar-button {
+  border-radius: 24px;
+  padding: 8px 16px;
+  margin: 10px;
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;;
+}
 
+.nav-bar-button a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-bar-button:hover {
+  border: 2px solid var(--accent);
+  background: var(--background);
+}
 /* Menu icon styles */
 .nav-bar .menu-icon {
   display: none;
+  padding: 4px;
+  margin: 4px;
 }
-
-
-
 
 /* ----------------------------------------
   Circle Styles
