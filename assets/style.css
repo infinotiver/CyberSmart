@@ -31,8 +31,8 @@ body {
 
 /* Selected text styles */
 ::selection {
-  background: var(--background);
-  color: var(--primary);
+  background: var(--primary);
+  color: var(--background);
 }
 
 /* Scrollbar styles */
