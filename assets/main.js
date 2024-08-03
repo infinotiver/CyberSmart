@@ -98,10 +98,16 @@ menuIcon.addEventListener("click", () => {
 
 document.addEventListener('scroll', function() {
   const navBar = document.querySelector('.nav-bar');
+  const isLargeScreen = window.matchMedia('(min-width: 1024px)').matches; // Check for large screens
   
-  if (window.scrollY > 0) {
-    navBar.classList.add('scrolled');
+  if (isLargeScreen) {
+    if (window.scrollY > 0) {
+      navBar.classList.add('scrolled');
+    } else {
+      navBar.classList.remove('scrolled');
+    }
   } else {
     navBar.classList.remove('scrolled');
   }
 });
+
