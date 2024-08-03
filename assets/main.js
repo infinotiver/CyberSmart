@@ -67,7 +67,7 @@ function rotateText() {
 
   intervalId = setInterval(typeLetter, 100);
 }
-
+rotateText()
 document.addEventListener('DOMContentLoaded', () => {
   const statsElement = document.querySelector('.middle-text .stats');
   let isVisible = false;
