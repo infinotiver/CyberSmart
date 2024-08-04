@@ -246,7 +246,7 @@ body {
 .nav-bar ul li {
   position: relative;
   margin: 10px;
-  padding:  6px 10px;
+  padding: 6px 10px;
   transition: 0.5s ease;
 }
 
@@ -491,7 +491,7 @@ body {
 ---------------------------------------- */
 /* General Footer Styles */
 footer {
-  background: #1f1f1f80;
+  background: linear-gradient(to top, #1f1f1f8c, #ffffff00);
   /* Slightly transparent black for a dark overlay */
   border-radius: 15px;
   display: grid;
@@ -515,36 +515,32 @@ footer a:hover {
 }
 
 .footer-header {
-  grid-column: 1 / -1;
-  /* Span across all columns */
-  font-size: 4rem;
-  /* Very large font size */
+  grid-column: 1/2;
+  font-size: 12rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 10px;
   text-align: center;
   position: relative;
-}
-
-.footer-credit {
-  font-size: 0.9rem;
-  color: #b0b0b0;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  text-align: left;
-  margin: 4px;
+  transition: all 0.2s ease;
 }
 
 .footer-disclaimer {
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
   font-size: 0.85rem;
   color: #d0d0d0;
   text-align: justify;
-  padding: 10px 0;
+  padding: 16px;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
 .footer-links {
-  grid-column: 1 / -1;
+  grid-column: 1 / 1;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -611,6 +607,9 @@ footer a:hover {
     font-size: 2.2rem;
 
   }
+  .footer-header {
+    font-size: 8rem;
+  }
 }
 
 /* Responsive adjustments for 768px and below */
@@ -632,6 +631,9 @@ footer a:hover {
     padding: 10px;
     font-size: 2rem;
   }
+  .footer-header {
+    font-size: 6rem;
+  }
 }
 
 /* Responsive adjustments for 576px and below */
@@ -647,6 +649,9 @@ footer a:hover {
 
   .rotating-text-container {
     display: none
+  }
+  .footer-header {
+    font-size: 5rem;
   }
 }
 
@@ -673,5 +678,8 @@ footer a:hover {
 
   .middle-text .stats cite {
     font-size: 0.6rem;
+  }
+  .footer-header {
+    font-size: 4rem;
   }
 }
