@@ -548,6 +548,14 @@ footer a:hover {
   grid-row: 2 / 3;
 }
 
+.credit {
+  padding: 2px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  color: gray;
+}
+
 .footer-links a {
   color: #e0e0e0;
 }
@@ -607,6 +615,7 @@ footer a:hover {
     font-size: 2.2rem;
 
   }
+
   .footer-header {
     font-size: 8rem;
   }
@@ -631,6 +640,7 @@ footer a:hover {
     padding: 10px;
     font-size: 2rem;
   }
+
   .footer-header {
     font-size: 6rem;
   }
@@ -650,6 +660,7 @@ footer a:hover {
   .rotating-text-container {
     display: none
   }
+
   .footer-header {
     font-size: 5rem;
   }
@@ -679,6 +690,7 @@ footer a:hover {
   .middle-text .stats cite {
     font-size: 0.6rem;
   }
+
   .footer-header {
     font-size: 4rem;
   }
