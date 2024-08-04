@@ -209,7 +209,7 @@ body {
 /* Additional styles when scrolled */
 .nav-bar.scrolled {
   top: 10px;
-  background-color: #1f1f1f8c;
+  background-color: #1f1f1fbd;
   backdrop-filter: blur(10px);
   padding: 12px;
   /* Adjusted padding */
