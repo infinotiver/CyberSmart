@@ -230,6 +230,7 @@ body {
   display: inline-flex;
   list-style: none;
   transition: all 0.3s ease-in-out;
+  flex-grow:1;
 }
 
 /* Styles for navigation bar list items */
