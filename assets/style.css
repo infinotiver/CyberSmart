@@ -203,34 +203,43 @@ body {
   padding: 8px;
   border-radius: 0;
   transition: all 0.2s ease, background-color 0.5s ease;
+  justify-content: space-around;
 }
 
 /* Additional styles when scrolled */
 .nav-bar.scrolled {
   top: 10px;
-  width: 80%;
-  margin: 0 auto;
-  background-color: #1f1f1f80;
+  background-color: #1f1f1f8c;
   backdrop-filter: blur(10px);
-  padding: 8px;
+  padding: 12px;
+  /* Adjusted padding */
   border-radius: 24px;
+  max-width: 80%;
+  /* Reduce width on scroll */
+  margin: 0 auto;
+  box-shadow: 0 2px 2px rgba(21, 21, 22, 0.2);
 }
 
 /* Styles for navigation bar heading */
 .nav-bar h1 {
   color: var(--text);
   font-size: 2rem;
-  flex-grow: 1;
   text-align: left;
-  padding: 10px;
+  flex-grow: 1;
 }
 
 /* Styles for navigation bar list */
 .nav-bar ul {
-  display: inline-flex;
+  display: flex;
+  /* Use flexbox for horizontal layout */
   list-style: none;
-  transition: all 0.3s ease-in-out;
-  flex-grow:1;
+  margin: 0;
+  padding: 0;
+  flex-grow: 2;
+  /* Allow to grow to occupy available space */
+  align-items: center;
+  justify-content: center;
+  /* Center items within the flex container */
 }
 
 /* Styles for navigation bar list items */
@@ -246,7 +255,7 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  top: 100%;
+  bottom: 0;
   height: 2px;
   width: 100%;
   transform: scaleX(0);
@@ -273,14 +282,16 @@ body {
 .nav-bar ul a:hover {
   color: var(--text);
 }
+
+/* Button styles */
 .nav-bar-button {
-  border-radius: 24px;
-  padding: 8px 16px;
-  margin: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 10px;
   border: 2px solid var(--primary);
   background-color: var(--secondary);
   transition: 0.4s all ease-in-out;
-  cursor: pointer;;
+  cursor: pointer;
 }
 
 .nav-bar-button a {
@@ -292,12 +303,15 @@ body {
   border: 2px solid var(--accent);
   background: var(--background);
 }
+
 /* Menu icon styles */
 .nav-bar .menu-icon {
   display: none;
   padding: 4px;
-  margin: 4px;
+  margin: 0 10px;
+  /* Margin for spacing */
 }
+
 
 /* ----------------------------------------
   Circle Styles
@@ -477,7 +491,8 @@ body {
 ---------------------------------------- */
 /* General Footer Styles */
 footer {
-  background: #1f1f1f80; /* Slightly transparent black for a dark overlay */
+  background: #1f1f1f80;
+  /* Slightly transparent black for a dark overlay */
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -500,8 +515,10 @@ footer a:hover {
 }
 
 .footer-header {
-  grid-column: 1 / -1; /* Span across all columns */
-  font-size: 4rem; /* Very large font size */
+  grid-column: 1 / -1;
+  /* Span across all columns */
+  font-size: 4rem;
+  /* Very large font size */
   font-weight: 700;
   color: var(--text);
   margin-bottom: 10px;
@@ -511,28 +528,28 @@ footer a:hover {
 
 .footer-credit {
   font-size: 0.9rem;
-  color: #b0b0b0; /* Subtle grey colour */
-  grid-column: 1 / 2; /* Align in the same row as footer-links */
-  grid-row: 2 / 3; /* Place in the bottom row */
+  color: #b0b0b0;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
   text-align: left;
   margin: 4px;
 }
 
 .footer-disclaimer {
-  grid-column: 1 / -1; /* Span across all columns */
+  grid-column: 1 / -1;
   font-size: 0.85rem;
-  color: #d0d0d0; 
+  color: #d0d0d0;
   text-align: justify;
   padding: 10px 0;
 }
 
 .footer-links {
-  grid-column: 1 / -1; /* Span across all columns */
+  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
   gap: 15px;
   font-size: 0.9rem;
-  grid-row: 2 / 3; /* Align in the same row as footer-credit */
+  grid-row: 2 / 3;
 }
 
 .footer-links a {
@@ -540,24 +557,11 @@ footer a:hover {
 }
 
 .footer-links a:hover {
-  color: #00bcd4; /* Accent colour on hover */
+  color: var(--accent);
 }
 
 /* Responsive adjustments for 992px and below */
 @media (max-width: 992px) {
-  .header-text {
-    font-size: 6rem;
-    padding: 2.5vh 0;
-  }
-
-  .description {
-    font-size: 1.2rem;
-  }
-
-  .rotating-text {
-    font-size: 1.2rem;
-  }
-
   .nav-bar {
     justify-content: space-between;
     padding: 6px;
@@ -566,6 +570,7 @@ footer a:hover {
   .nav-bar h1 {
     margin-left: 0;
     font-size: 1.5625rem;
+    flex-grow: 1;
   }
 
   .nav-bar ul {
